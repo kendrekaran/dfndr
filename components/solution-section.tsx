@@ -1,4 +1,5 @@
 import Button from "@/components/_ui/button";
+import Image from "next/image";
 
 const featurePills = [
   {
@@ -60,9 +61,11 @@ export default function SolutionSection() {
 
             <div className="solution-bg-glow absolute right-[-30%] bottom-[-20%] w-[120%] aspect-square sm:right-[-69px] sm:bottom-[-47px] sm:w-[703px] sm:h-[658px] sm:aspect-auto mix-blend-overlay pointer-events-none select-none">
               <div className="absolute inset-0 [background:radial-gradient(46.99%_53.13%_at_50%_50%,#FFF_0%,rgba(255,255,255,0)_100%)]" />
-              <img
+              <Image
                 src="https://api.builder.io/api/v1/image/assets/TEMP/212e58a565cbc901adbe6ca7f3873aca62a50d18?width=1406"
                 alt=""
+                fill
+                sizes="(min-width: 1024px) 703px, 120vw"
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
@@ -102,9 +105,11 @@ export default function SolutionSection() {
             </div>
 
             <div className="hidden lg:block absolute right-[-108px] top-[-50px] w-full pointer-events-none">
-              <img
+              <Image
                 src="/phone-cta.png"
                 alt="App screenshot"
+                width={1200}
+                height={900}
                 className="absolute w-full h-auto"
               />
             </div>

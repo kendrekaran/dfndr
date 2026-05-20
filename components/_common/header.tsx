@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import Button from "@/components/_ui/button";
 
 function DfndrLogo() {
@@ -106,9 +107,9 @@ export default function Header() {
     <header className="w-full relative z-50">
       <div className="px-global py-5 sm:py-7">
         <div className="max-w-global mx-auto flex items-center justify-between gap-3">
-          <a href="/" aria-label="dfndr home" onClick={closeMenu}>
+          <Link href="/" aria-label="dfndr home" onClick={closeMenu}>
             <DfndrLogo />
-          </a>
+          </Link>
 
           <nav className="hidden md:flex items-center gap-8">
             <a
