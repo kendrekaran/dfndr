@@ -47,6 +47,7 @@ const problems = [
   },
 ];
 
+
 export default function ProblemSection() {
   return (
     <section id="problem" className="relative z-0">
