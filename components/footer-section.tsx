@@ -38,17 +38,7 @@ function FooterSection() {
                 </div>
 
                 <div className="flex flex-col gap-8 sm:flex-row sm:gap-16 md:gap-[132px]">
-                  <div className="flex flex-col gap-[5px]">
-                    <p className="font-semibold text-[16px] sm:text-[18px] leading-[25px] text-black">
-                      Links
-                    </p>
-                    <div className="flex flex-col gap-[10px] mt-1">
-                      <a href="#about" className="text-[#3B3B3B] text-[15px] sm:text-[16px] leading-[25px] font-medium hover:text-black transition-colors">About</a>
-                      <a href="#services" className="text-[#3B3B3B] text-[15px] sm:text-[16px] leading-[25px] font-medium hover:text-black transition-colors">Services</a>
-                      <a href="#locations" className="text-[#3B3B3B] text-[15px] sm:text-[16px] leading-[25px] font-medium hover:text-black transition-colors">Locations</a>
-                      <a href="#values" className="text-[#3B3B3B] text-[15px] sm:text-[16px] leading-[25px] font-medium hover:text-black transition-colors">Our Values</a>
-                    </div>
-                  </div>
+                 
 
                   <div className="flex flex-col gap-[4px]">
                     <p className="font-semibold text-[16px] sm:text-[18px] leading-[25px] text-black">
