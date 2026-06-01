@@ -127,10 +127,10 @@ export default function PricingSection() {
             <span className="text-[#635BFF] text-[16px] sm:text-[18px] font-bold uppercase tracking-[0.36px]">
               Pricing
             </span>
-            <h2 className="max-w-[14em]">
+            <h2 className="max-w-[16em]">
               Everything included. One price.
             </h2>
-            <p className="max-w-[30em] text-black/60">
+            <p className=" text-black/60">
               One price per guard per month. Cancel anytime. No setup fees, no contracts.
             </p>
           </div>

@@ -13,7 +13,7 @@ export default function HeroSection() {
                 <span className="text-[#635BFF]">security operations</span>{" "}
                 from one platform.
               </h1>
-              <p className="max-w-[30em] text-black/60">
+              <p className="max-w-[30em] md:text-[20px] leading-[30px] text-black/60">
                 DFNDR gives security companies real-time guard tracking,
                 automated shift management, and instant reporting everything
                 your team needs, in one place.

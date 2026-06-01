@@ -149,12 +149,12 @@
 
   h1,
   .h1-style {
-    @apply text-[min(40px,10vw)] leading-[96%] sm:text-[48px] md:text-[70px];
+    @apply text-[min(40px,10vw)] font-bold leading-[96%] sm:text-[48px] md:text-[60px] md:leading-[65px] tracking-[-0.02em];
   }
 
   h2,
   .h2-style {
-    @apply text-[min(36px,8vw)] sm:text-[48px] md:text-[56px];
+    @apply text-[min(36px,8vw)] font-semibold  sm:text-[48px] sm:leading-[54px] md:text-[48px];
   }
 
   h3,
@@ -169,11 +169,11 @@
   h5,
   h6,
   h3 span {
-    @apply leading-[0.9230769230769231] font-bold tracking-[-0.03em];
+    @apply   tracking-[-0.01em];
   }
   p,
   .p-style {
-    @apply text-[14px] leading-[120%] tracking-[-0.01em] md:text-[16px];
+    @apply text-[14px] leading-[30px] tracking-normal md:text-[18px];
   }
 
   html,
@@ -188,12 +188,35 @@
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
   .pricing-card-outer {
-    @apply p-2 sm:p-3 rounded-[24px] sm:rounded-[32px] border-[2px] sm:border-[3px] border-black/10 w-full max-w-[34rem];
-    background: linear-gradient(180deg, #635BFF 5.81%, rgba(172, 168, 255, 0.10) 94.19%);
+    @apply relative pt-2 px-2 pb-0 sm:pt-3 sm:px-3 sm:pb-0 rounded-[24px] sm:rounded-[32px] border-[2px] sm:border-[3px] border-black/10 w-full max-w-[34rem] overflow-hidden bg-white;
+  }
+
+  .pricing-card-outer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 8px 8px 0;
+    background: linear-gradient(180deg, #635BFF 4.81%, rgba(172, 168, 255, 0.10) 94.19%);
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  @media (min-width: 640px) {
+    .pricing-card-outer::before {
+      padding: 12px 12px 0;
+    }
   }
 
   .pricing-card-inner {
-    @apply flex flex-col items-start gap-4 rounded-[16px] sm:rounded-[20px] bg-white px-4 pt-6 sm:pt-8 pb-5 w-full;
+    @apply relative z-[1] flex flex-col items-start gap-4 rounded-t-[16px] sm:rounded-t-[20px] bg-white px-4 pt-4 sm:pt-8 pb-5 w-full;
   }
 
   .pricing-price-amount {
@@ -212,7 +235,7 @@
   }
 
   .cta-dot-grid {
-    @apply absolute inset-y-0 right-0 w-3/5 pointer-events-none;
+    @apply absolute inset-y-0 right-0 w-3/5 pointer-events-none hidden lg:block;
     background-image: radial-gradient(circle, rgba(255,255,255,0.25) 1.5px, transparent 1.5px);
     background-size: 28px 28px;
     mask-image: linear-gradient(to right, transparent 0%, black 40%);

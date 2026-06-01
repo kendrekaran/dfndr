@@ -57,7 +57,7 @@ export default function ProblemSection() {
               <span className="text-[#635BFF] text-[16px] sm:text-[18px] font-bold uppercase tracking-[0.02em] text-center">
                 The problem
               </span>
-              <h2 className="max-w-[12em] text-center">
+              <h2 className="max-w-[14em]  text-center">
                 Most security teams still runs on{" "}
                 <span className="text-[#635BFF]">spreadsheets and calls.</span>
               </h2>
@@ -66,11 +66,11 @@ export default function ProblemSection() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+            <div className="flex flex-wrap items-center justify-center sm:grid-cols-2 gap-4 w-full">
               {problems.map((problem) => (
                 <div
                   key={problem.title}
-                  className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-5 rounded-[16px] sm:rounded-[20px] border-2 border-[#EFEFEF] min-h-[180px] sm:min-h-[220px]"
+                  className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-5 rounded-[16px] sm:rounded-[20px] border-2 border-[#EFEFEF] min-h-[180px] max-w-[402px] sm:min-h-[220px]"
                 >
                   <div className="shrink-0 [&>svg]:w-[40px] [&>svg]:h-[40px] sm:[&>svg]:w-[50px] sm:[&>svg]:h-[50px]">{problem.icon}</div>
                   <div className="flex flex-col gap-2">

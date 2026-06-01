@@ -57,31 +57,31 @@ export default function SolutionSection() {
     <section id="solution" className="relative z-0">
       <div className="px-global py-section-md">
         <div className="max-w-global mx-auto">
-          <div className="solution-card relative overflow-hidden rounded-[24px] sm:rounded-[32px] border-[3px] sm:border-[6px] border-white/10 [background:linear-gradient(65deg,#635BFF_25.5%,#ACA8FF_78.44%)] min-h-[420px] sm:min-h-[480px] lg:min-h-[580px]">
+          <div className="solution-card  relative overflow-hidden rounded-[24px] sm:rounded-[32px] border sm:border-2 border-white/10 [background:linear-gradient(65deg,#635BFF_25.5%,#ACA8FF_78.44%)] min-h-[420px] sm:min-h-[480px] lg:min-h-[580px]">
 
-            <div className="solution-bg-glow absolute right-[-30%] bottom-[-20%] w-[120%] aspect-square sm:right-[-69px] sm:bottom-[-47px] sm:w-[703px] sm:h-[658px] sm:aspect-auto mix-blend-overlay pointer-events-none select-none">
-              <div className="absolute inset-0 [background:radial-gradient(46.99%_53.13%_at_50%_50%,#FFF_0%,rgba(255,255,255,0)_100%)]" />
+            <div className="solution-bg-glow hidden lg:block absolute right-[-69px] bottom-[-47px] w-[703px] h-[658px] mix-blend-overlay pointer-events-none select-none">
+              
               <Image
-                src="https://api.builder.io/api/v1/image/assets/TEMP/212e58a565cbc901adbe6ca7f3873aca62a50d18?width=1406"
+                src="/dotted-bg.svg"
                 alt=""
                 fill
-                sizes="(min-width: 1024px) 703px, 120vw"
+                sizes="703px"
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
 
-            <div className="relative z-10 flex flex-col gap-6 sm:gap-8 px-5 py-8 sm:px-[50px] sm:py-[60px] lg:py-[100px] lg:max-w-[620px]">
+            <div className="relative z-10 flex flex-col gap-6 sm:gap-8 px-5 py-8 sm:px-[50px] sm:py-[60px] lg:py-[90px] lg:max-w-[620px]">
               <div className="flex flex-col gap-[10px]">
                 <p className="text-white font-bold uppercase tracking-[0.36px] text-[13px] sm:text-base">The solution</p>
                 <h2 className="text-white max-w-[8.875em]">
                   One platform. Every operation.
                 </h2>
-                <p className="text-white max-w-[29.75em]">
+                <p className="text-white text-[18px] leading-[30px] max-w-[29.75em]">
                   DFNDR replaces your stack of disconnected tools with a single operations platform built specifically for security companies.
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2 sm:gap-3">
+              <div className="flex lg:min-w-[600px] flex-wrap gap-2 sm:gap-3">
                 {featurePills.map((pill) => (
                   <div
                     key={pill.label}
@@ -98,19 +98,20 @@ export default function SolutionSection() {
               <Button
                 size="navbar"
                 rounded="xl"
-                className="!bg-white !text-[#635BFF] !border-2 !border-[#C3C3C3] shadow-[inset_0_-2px_1px_0_rgba(0,0,0,0.25)] !font-semibold self-start !px-6 !py-2.5 !text-[14px] sm:!px-12 sm:!py-4 sm:!text-[18px]"
+                className="!bg-white flex items-center gap-2 !text-[#635BFF] !border-2 !border-[#C3C3C3] shadow-[inset_0_-2px_1px_0_rgba(0,0,0,0.25)] !font-semibold self-start !px-6 !py-2.5 !text-[14px] sm:!px-[32px] sm:!py-4 sm:!text-[18px]"
               >
-                Book a Demo
+                Start Free Trial
+                <Image src="/right-arrow.svg" alt="arrow right" width={24} height={24} />
               </Button>
             </div>
 
-            <div className="hidden lg:block absolute right-[-108px] top-[-50px] w-full pointer-events-none">
-              <Image
+            <div className="hidden lg:block absolute right-[-638px] top-0 w-full pointer-events-none">
+            <Image
                 src="/phone-cta.png"
                 alt="App screenshot"
                 width={1200}
                 height={900}
-                className="absolute w-full h-auto"
+                className="absolute w-[583px] h-auto object-cover"
               />
             </div>
 

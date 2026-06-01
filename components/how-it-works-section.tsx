@@ -3,7 +3,7 @@ import React from "react";
 const steps = [
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="42" height="42" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path opacity="0.2" d="M22 5V27H17V20H11V27H6V5H22Z" fill="white" />
         <path d="M31 26H29V12C29.2652 12 29.5196 11.8946 29.7071 11.7071C29.8946 11.5196 30 11.2652 30 11C30 10.7348 29.8946 10.4804 29.7071 10.2929C29.5196 10.1054 29.2652 10 29 10H23V6C23.2652 6 23.5196 5.89464 23.7071 5.70711C23.8946 5.51957 24 5.26522 24 5C24 4.73478 23.8946 4.48043 23.7071 4.29289C23.5196 4.10536 23.2652 4 23 4H5C4.73478 4 4.48043 4.10536 4.29289 4.29289C4.10536 4.48043 4 4.73478 4 5C4 5.26522 4.10536 5.51957 4.29289 5.70711C4.48043 5.89464 4.73478 6 5 6V26H3C2.73478 26 2.48043 26.1054 2.29289 26.2929C2.10536 26.4804 2 26.7348 2 27C2 27.2652 2.10536 27.5196 2.29289 27.7071C2.48043 27.8946 2.73478 28 3 28H31C31.2652 28 31.5196 27.8946 31.7071 27.7071C31.8946 27.5196 32 27.2652 32 27C32 26.7348 31.8946 26.4804 31.7071 26.2929C31.5196 26.1054 31.2652 26 31 26ZM27 12V26H23V12H27ZM7 6H21V26H18V20C18 19.7348 17.8946 19.4804 17.7071 19.2929C17.5196 19.1054 17.2652 19 17 19H11C10.7348 19 10.4804 19.1054 10.2929 19.2929C10.1054 19.4804 10 19.7348 10 20V26H7V6ZM16 26H12V21H16V26ZM9 10C9 9.73478 9.10536 9.48043 9.29289 9.29289C9.48043 9.10536 9.73478 9 10 9H12C12.2652 9 12.5196 9.10536 12.7071 9.29289C12.8946 9.48043 13 9.73478 13 10C13 10.2652 12.8946 10.5196 12.7071 10.7071C12.5196 10.8946 12.2652 11 12 11H10C9.73478 11 9.48043 10.8946 9.29289 10.7071C9.10536 10.5196 9 10.2652 9 10ZM15 10C15 9.73478 15.1054 9.48043 15.2929 9.29289C15.4804 9.10536 15.7348 9 16 9H18C18.2652 9 18.5196 9.10536 18.7071 9.29289C18.8946 9.48043 19 9.73478 19 10C19 10.2652 18.8946 10.5196 18.7071 10.7071C18.5196 10.8946 18.2652 11 18 11H16C15.7348 11 15.4804 10.8946 15.2929 10.7071C15.1054 10.5196 15 10.2652 15 10ZM9 15C9 14.7348 9.10536 14.4804 9.29289 14.2929C9.48043 14.1054 9.73478 14 10 14H12C12.2652 14 12.5196 14.1054 12.7071 14.2929C12.8946 14.4804 13 14.7348 13 15C13 15.2652 12.8946 15.5196 12.7071 15.7071C12.5196 15.8946 12.2652 16 12 16H10C9.73478 16 9.48043 15.8946 9.29289 15.7071C9.10536 15.5196 9 15.2652 9 15ZM15 15C15 14.7348 15.1054 14.4804 15.2929 14.2929C15.4804 14.1054 15.7348 14 16 14H18C18.2652 14 18.5196 14.1054 18.7071 14.2929C18.8946 14.4804 19 14.7348 19 15C19 15.2652 18.8946 15.5196 18.7071 15.7071C18.5196 15.8946 18.2652 16 18 16H16C15.7348 16 15.4804 15.8946 15.2929 15.7071C15.1054 15.5196 15 15.2652 15 15Z" fill="white" />
       </svg>
@@ -43,30 +43,34 @@ function HowItWorksSection() {
               <span className="text-[#635BFF] text-[16px] sm:text-[18px] font-bold tracking-[0.02em] uppercase">
                 How it works
               </span>
-              <h2 className="max-w-[13.9em] text-center">
-                Live in a day. Results from week one.
+              <h2 className=" text-center">
+                Live in a day. <span className="hidden md:inline"><br /></span> Results from week one.
               </h2>
-              <p className="max-w-[667px] text-center text-black/60">
+              <p className=" text-center text-black/60">
                 No enterprise sales process. No 6-month implementation. Just sign up and go.
               </p>
             </div>
 
-            <div className="relative flex flex-col md:flex-row justify-center items-center md:items-start gap-6 md:gap-0 w-full">
+            <div className="relative grid w-full gap-6 md:grid-cols-3 md:gap-0">
               <div
-                className="hidden md:block absolute border-t-2 border-dashed border-[#635BFF]/20"
+                className="pointer-events-none absolute hidden border-t-2 border-dashed border-[#635BFF]/20 md:block"
                 style={{ top: "36px", left: "calc(100% / 6)", right: "calc(100% / 6)" }}
               />
 
               {steps.map((step) => (
                 <div
                   key={step.title}
-                  className="flex flex-col items-center gap-2 md:flex-1 text-center px-2 md:px-6 py-2 md:py-3 max-w-[340px]"
+                  className="mx-auto flex max-w-[340px] flex-col items-center text-center md:mx-0 md:max-w-none md:px-6"
                 >
-                  <div className="relative z-10 flex w-[64px] h-[64px] sm:w-[72px] sm:h-[72px] items-center justify-center rounded-full bg-[#635BFF] shrink-0">
-                    {step.icon}
+                  <div className="relative z-10 flex h-[72px] w-full shrink-0 items-center justify-center">
+                    <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[#635BFF]">
+                      {step.icon}
+                    </div>
                   </div>
-                  <h3 className="mt-1">{step.title}</h3>
-                  <p className="text-black/60">{step.description}</p>
+                  <div className="flex flex-col items-center gap-2 px-2 pb-2 pt-2 md:px-0 md:pb-3 md:pt-3">
+                    <h3>{step.title}</h3>
+                    <p className="text-black/60">{step.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
